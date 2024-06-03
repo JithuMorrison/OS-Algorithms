@@ -17,7 +17,7 @@ void insertAtBeginning(struct Node** head, int data, int final_num) {
         exit(EXIT_FAILURE);
     }
     newNode->data = data;
-    newNode->final_num = final_num; // Initialize final_num
+    newNode->final_num = final_num; 
     newNode->next = *head;
     newNode->prev = NULL;
     if (*head != NULL) {
@@ -33,7 +33,7 @@ void insertAtEnd(struct Node** head, int data, int final_num) {
         exit(EXIT_FAILURE);
     }
     newNode->data = data;
-    newNode->final_num = final_num; // Initialize final_num
+    newNode->final_num = final_num; 
     newNode->next = NULL;
 
     if (*head == NULL) {
@@ -105,7 +105,7 @@ int contiguous(struct Node* start, int total) {
     int free_count = 0;
     while (current != NULL && free_count < total) {
         if (current->data != 0) {
-            return 0; // Not enough contiguous free nodes
+            return 0; 
         }
         current = current->next;
         free_count++;
@@ -156,7 +156,6 @@ void check(struct Node* head, int curre, int total, int pg) {
 int main(){
     struct Node* memory = NULL;
     int totalsize = 10;
-    // Initialize memory blocks
     for(int i=0;i<totalsize;i++){
         insertAtEnd(&memory, 0, i);
     }
