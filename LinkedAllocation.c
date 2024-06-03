@@ -188,6 +188,10 @@ int main(){
         if (k == 1) {
             printf("Enter the size: ");
             o = scanf("%d", &size);
+            if(size<=0){
+                printf("Enter the size: ");
+                o = scanf("%d", &size);
+            }
             printf("Enter file no: ");
             o = scanf("%d", &pg);
             if (memory->free>=size) {
